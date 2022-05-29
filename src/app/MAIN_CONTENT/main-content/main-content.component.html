@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-12 header">
+        <img
+            src="https://images.squarespace-cdn.com/content/v1/5f7c3e7d8ed5803eef772aa1/1602925874656-0XJP4CPFX88LEKTT9FN2/CH_Logo+%28W%29.png?format=1500w">
+        <button class="home" routerLink="home">HOME</button>
+        <button class="get" routerLink="get_toknow_us">GET TO KNOW US</button>
+        <button class="loc" routerLink="locations">LOCATIONS</button>
+        <button class="order" routerLink="orderOnline">ORDER ONLINE</button>
+        <button class="contact" routerLink="contact">CONTACT</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 leftSide">
+        <button routerLink="icecream"> Icecream</button>
+    </div>
+    <div class="row">
+        <div class="col-4 leftSide">
+            <button routerLink="scoops"> Scoops</button>
+        </div>
+        <div class="row">
+            <div class="col-4 leftSide">
+                <button routerLink="chocolate">Chocolate</button>
+            </div>
+            <div class="row">
+                <div class="col-4 leftSide">
+                    <button routerLink="strawberry"> Strawberry</button>
+                </div>
+                <div class="row">
+                    <div class="col-4 leftSide">
+                        <button routerLink="vanilla">Vanilla</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 leftSide">
+                            <button routerLink="butterscotch">ButterScotch</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 leftSide">
+                                <button routerLink="blackforest">Black Forest</button>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-8 mainContent">
+                                <!-- <img class="image"
+                                    src="https://ohsostoned.com/wp-content/uploads/2021/06/about-us-1.png"> -->
+                                <label> ENTER NAME</label>
+                                <input class="input" type="text" [(ngModel)]="displayName">
+                                <!-- <p> {{displayName}}</p> -->
+                                <button (click)="submitfunction($event)"> Submit</button>
+                                <p class="para">{{customerName}}</p>
+                                <input  class="put" type="text" placeholder="Enter Menu" [(ngModel)]="menuDisplay">
+                                <button (click)="addFunction()"> ADD</button>
+                                
+
+                            </div>
+                        </div>
+                        <div *ngFor="let item of listofmenuitems;let i=index" >
+                            <p>{{i+1}}&nbsp;&nbsp;{{item}}</p>
+                        </div>
